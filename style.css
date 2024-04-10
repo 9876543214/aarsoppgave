@@ -189,6 +189,11 @@ body a {
     background-color: rgb(49, 219, 40);
     margin-top: 80p;
     width: 10vw;
+ 
+}
+
+#kjøp:hover {
+   cursor: pointer;
 }
 
 .footer-seter {
