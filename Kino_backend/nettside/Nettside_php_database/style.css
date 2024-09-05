@@ -1,0 +1,625 @@
+/*Felles for alle sider*/
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700;900&display=swap'); /*font til billettsiden*/
+
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #25252b;
+    color: white;
+    font-family: "Alata", sans-serif;
+    font-size: calc(8px + .7vw);
+}
+
+body a {
+    text-decoration: none;
+}
+
+
+
+/*Header*/
+
+.header {
+    font-family: "Alata", sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.header h1{
+    padding-left: 1vw;
+}
+
+.header div{
+    display: flex;
+    flex-direction: column;
+    row-gap: -1vw;
+    margin-right: 2vw;
+}
+
+/*Navbar*/
+
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    justify-content: space-between;
+    font-family: "Alata", sans-serif
+}
+
+.links {
+    font-family: "Alata", sans-serif;
+    display: flex;
+    justify-content: space-between;
+    width: 15vw;
+}
+
+#username,
+.links a {
+    color: white;
+    margin-top: 1vw;
+    margin-left: 1vw;
+}
+
+#username {
+    margin-left: none;
+    margin-right: 4vw;
+}
+
+#login-signup {
+    color: white;
+    margin-right: 4vw;
+}
+
+#login-signup a{
+    color: white;
+    text-decoration: underline;
+}
+
+
+/*Forside*/
+
+
+    .content-filmer {
+        /*content på forsiden*/
+        margin-top: 6vw;
+    }
+
+    #logout {
+        background: none;
+        color: inherit;
+        border: none;
+        padding: 0;
+        color: rgb(88, 92, 209);
+        text-decoration: underline;
+        font: inherit;
+        cursor: pointer;
+        outline: inherit;
+    }
+
+    /*Dune*/
+
+        .film-dune {
+            /*div for alt med dune*/
+            display: flex;
+            flex-direction: row;
+        }
+
+        .poster-dune {
+            /*bilde og tekst dune*/
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-left: 1.5vw;
+        }
+
+
+
+        #img-dune {
+            width: 17vw;
+        }
+
+        .tider-dune {
+            /*boks ved siden av bilde*/
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            background-color: rgb(20, 20, 20);
+            border-radius: 1.3vw;
+            max-width: 50vw;
+            width: fit-content;
+            height: min-content;
+            max-height: 47vh;
+            gap: 20vw;
+            margin-left: 5vw;
+        }
+
+
+        #tider {
+            /*style per link på forsiden*/
+            background-color: black;
+            color: white;
+            cursor: pointer;
+            padding: 1.4vw;
+            padding-left: 2.7vw;
+            padding-right: 2.7vw;
+            border-radius: 1vw;
+            border: 3px solid transparent;
+            transition: ease-in 0.3s;
+            position: relative;
+        }
+
+
+
+        #tider:after {
+            content: "";
+            border: 3px solid white;
+            transform: scaleX(1.2) scaleY(1.4);
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            transition: 300ms;
+            border-radius: 1vw;
+        }
+
+        #tider:hover::after {
+            transform: scaleX(1) scaleY(1);
+            opacity: 1;
+        }
+
+        .tider-dune p {
+            margin-left: 1.4vw;
+            margin-top: 1.7vw;
+        }
+
+        .tider-dune>div {
+            margin-left: 3vw;
+        }
+
+        #tid-dune-topp {
+            margin-top: 3vw;
+        }
+
+        #tid-dune-bunn {
+            margin-top: -10vw;
+        }
+
+
+/*kjøp seter sider*/
+
+    .kjøpseter {
+      overflow-x: hidden;
+    }
+
+    .content-kjøpseter {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 8vw;
+    }
+
+    #popup-login {
+        display: none;
+    }
+
+    .overlay-popup { /*styling til popup*/              
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.7);
+        transition: opacity 500ms;
+    }
+      
+    .popup {
+        margin: 70px auto;
+        margin-top: 30vh;
+        padding: 20px;
+        background: #fff;
+        border-radius: 5px;
+        width: 30%;
+        position: relative;
+    }
+      
+    .popup h2 {
+        margin-top: 0;
+        color: #333;
+        font-family: Tahoma, Arial, sans-serif;
+    }
+    .popup .close-popup {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        transition: all 200ms;
+        font-size: 30px;
+        font-weight: bold;
+        color: #333;
+        background: none;
+        border: none;
+        cursor: pointer;
+        outline: inherit;
+    }
+    .popup .close-popup:hover {
+        color: #f52727;
+    }
+    .popup .content-popup {
+        max-height: 30%;
+        overflow: auto;
+    }
+
+    .content-popup p{
+        color: #000;
+        font-family:"Alata", sans-serif;
+        font-weight: 400;
+    }
+
+    .content-popup p a{
+        text-decoration: underline;
+        color: rgb(88, 92, 209);
+    }
+
+    .content-popup p a:hover{
+        color: rgb(48, 51, 112);
+    }
+
+    #sal {
+        position: absolute;
+        font-size: 2.2vw;
+        top: -10px;
+        margin-left: 58.8vw;
+    }
+
+    .poster{
+        margin-left: 4.8vw;
+        margin-top: 3vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .poster img{
+        max-width: 20vw;
+    }        
+    
+    #poster-time {
+        margin-top: -.5vw;
+    }
+
+    .seter {
+        /*div for rader og seter*/
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-right: 24vw;
+        gap: 1vw;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .seter>div {
+        display: flex;
+        flex-direction: row;
+        gap: 1vw;
+    }
+
+    .content-kjøpseter button {
+        /*alle seter*/
+        height: 5vw;
+        width: 5vw;
+        border: none;
+        background-color: rgb(143, 136, 136);
+        border-radius: 17px;
+        min-width: 42px;
+        min-height: 42px;
+        cursor: pointer;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .reserved { /*stylingen som setene får når de er kjøpt*/
+        pointer-events: none;
+        background-color: #393636 !important;
+        color: rgb(164, 164, 164);
+    }
+
+    .content-kjøpseter button:hover {
+        background-color: #635d5d;
+    }
+
+    .valgt { /*stylingen som setene får når de er valgt*/
+        background-color: rgb(255, 255, 255) !important;
+        box-shadow: rgba(255, 255, 255, 0.56) 0px 0px 70px 4px;
+    }
+
+    .valgt:hover {
+        background-color: rgb(199, 199, 199) !important;
+        box-shadow: rgba(199, 199, 199, 0.56) 0px 0px 70px 4px;
+        ;
+    }
+
+    #valg-glow { /*lagde egen id og styling til eksempelsete i bunnen av kjøp seter sidene*/
+        background-color: rgb(255, 255, 255) !important;
+        box-shadow: rgba(255, 255, 255, 0.56) 0px 0px 70px 4px !important;
+    }
+
+    #valg-glow:hover {
+        background-color: rgb(199, 199, 199)!important;
+        box-shadow: rgba(199, 199, 199, 0.56) 0px 0px 70px 4px!important;
+    } 
+
+    #kjøp {
+        background-color: rgb(49, 219, 40);
+        margin-top: -20px;
+        width: 10vw;
+        cursor: pointer;
+
+    } 
+
+    #kjøp:hover {
+        filter: brightness(80%);
+    }
+
+    .footer-seter {
+        display: flex;
+        flex-direction: row;
+        width: 100vw;
+        justify-content: space-between;
+        margin-top: -7vw;
+    }
+
+    .info {
+        display: flex;
+        flex-direction: row;
+        gap: 3vw;
+        margin-left: 2vw;
+    }
+
+    .info>div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    #clearstorage {
+        margin-top: 4vw;
+        margin-right: 2vw;
+    }
+
+
+
+/*mine billetter siden*/
+
+    .content-minebilletter {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #ingenbilletttekst {
+        display: none;
+    }
+
+    #loginbillett {
+        display: none;
+    }
+
+    #loginbillett a{
+        text-decoration: underline;
+    }
+
+
+    /*styling til billettdesign*/
+
+        :root {
+            font-size: 20px;
+            --dark-blue: #1f2029;
+            --white-gr: #c4c3ca;
+            --yellow: #ffeba7;
+            --yellow-2: #f8ab37;
+        }
+
+        .color-yellow {
+            color: var(--yellow);
+        }
+
+        .size-22 {
+            font-size: 22px;
+        }
+
+        .section {
+            position: relative;
+            width: 100%;
+            display: block;
+            z-index: 2;
+        }
+
+
+        label {
+
+            position: relative;
+            width: 184px;
+            display: flex;
+            flex-direction: column;
+            
+            cursor: pointer;
+            padding: 50px 0;
+            text-align: center;
+            margin: 5px;
+            border-radius: 0;
+            background-color: transparent;
+            overflow: hidden;
+            transition: all 250ms linear;
+        }
+
+        label:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            display: block;
+            background-image: linear-gradient(335deg, var(--yellow), var(--yellow-2));
+        }
+
+        #mittsete {
+            font-family: 'Lato', sans-serif;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 1.2;
+            color: var(--dark-blue);
+            display: block;
+            transition: all 250ms linear;
+        }
+
+        .gap {
+            opacity: 0;
+            font-size: 15px;
+        }
+
+        #minfilm {
+            margin-top: -8px;
+            font-family: 'Lato', sans-serif;
+            font-weight: 900;
+            font-size: 24px;
+            line-height: 1;
+            text-transform: uppercase;
+            color: var(--dark-blue);
+            display: block;
+            transition: all 250ms linear;
+            text-shadow: 1px 2px 4px var(--yellow), 0 0 0 #000, 1px 2px 4px var(--yellow);
+        }
+
+        .mittsete1 sup {
+            font-size: 24px;
+            line-height: 1;
+            letter-spacing: 4px;
+        }
+
+        .mintid1,
+        .minsal1 {
+            font-family: 'Lato', sans-serif;
+            font-weight: 700;
+            font-size: 15px;
+            line-height: 1;
+            color: var(--dark-blue);
+            display: block;
+            transition: all 250ms linear;
+        }
+
+        .top-dots,
+        .bottom-dots {
+            position: absolute;
+            width: 100%;
+            display: block;
+            top: 0;
+            transform: translateY(-50%);
+            z-index: 10;
+        }
+
+        .bottom-dots {
+            top: 100%;
+        }
+
+        .dots span {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            display: block;
+            border-radius: 50%;
+            top: 0;
+            transform: translateY(-50%);
+            background-color: var(--dark-blue);
+        }
+
+        .dots span:nth-child(1) {
+            width: 30px;
+            height: 30px;
+            left: -15px;
+        }
+
+        .dots span:nth-child(2) {
+            width: 30px;
+            height: 30px;
+            right: -15px;
+        }
+
+        .dots span:nth-child(3) {
+            left: 19px;
+        }
+
+        .dots span:nth-child(4) {
+            left: 29px;
+        }
+
+        .dots span:nth-child(5) {
+            left: 39px;
+        }
+
+        .dots span:nth-child(6) {
+            left: 49px;
+        }
+
+        .dots span:nth-child(7) {
+            left: 59px;
+        }
+
+        .dots span:nth-child(8) {
+            left: 69px;
+        }
+
+        .dots span:nth-child(9) {
+            left: 79px;
+        }
+
+        .dots span:nth-child(10) {
+            left: 89px;
+        }
+
+        .dots span:nth-child(11) {
+            left: 99px;
+        }
+
+        .dots span:nth-child(12) {
+            left: 109px;
+        }
+
+        .dots span:nth-child(13) {
+            left: 119px;
+        }
+
+        .dots span:nth-child(14) {
+            left: 129px;
+        }
+
+        .dots span:nth-child(15) {
+            left: 139px;
+        }
+
+        .dots span:nth-child(16) {
+            left: 149px;
+        }
+
+        .dots span:nth-child(17) {
+            left: 159px;
+        }
+
+        .dots span:nth-child(18) {
+            left: 169px;
+        }
+
+        .dots span:nth-child(19) {
+            left: 179px;
+        }
+
+
+
